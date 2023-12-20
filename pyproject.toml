@@ -1,10 +1,19 @@
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+]
+
+[tool.setuptools_scm]
+version_file = "src/_version.py"
+
 
 [project]
 name = "Plutus"
-version = "0.0.1"
+dynamic = ["version"]
 description = "Simple dashboard to visualize my transactions"
 readme = "README.md"
 requires-python = ">=3.8"
@@ -14,6 +23,8 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 dependencies = [
-  "litestar",
   "sqlalchemy",
+  "pytest",
+  "black",
+  "pytz",
 ]
