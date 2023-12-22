@@ -27,4 +27,5 @@ dependencies = [
   "pytest",
   "black",
   "pytz",
+  "pydantic-settings",
 ]

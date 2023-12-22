@@ -1,7 +1,6 @@
-from plutus.db.models import Base, Transaction
+from plutus.db import *
 from datetime import date, datetime, timedelta, UTC
 import pytest
-from plutus.db.utils import *
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 

@@ -42,7 +42,6 @@ def delete_transaction(id: int, session: Session) -> None:
     if tr is not None:
         session.delete(tr)
         session.commit()
-    # session.execute(select(Transaction).where(Transaction.id == id))
 
 
 def update_transaction(id: int, new_values: dict, session: Session) -> None:
