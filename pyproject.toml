@@ -10,6 +10,8 @@ addopts = [
 [tool.setuptools_scm]
 version_file = "src/_version.py"
 
+[tool.black]
+line_lenght=88
 
 [project]
 name = "Plutus"
@@ -28,4 +30,6 @@ dependencies = [
   "black",
   "pytz",
   "pydantic-settings",
+  "litestar[standard]",
+  "alembic",
 ]

@@ -1,0 +1,13 @@
+Generic single-database configuration.
+
+# Generate a revision
+
+```
+alembic revision --autogenerate -m "<commit message>"
+```
+
+# Upgarding the DB
+
+```
+alembic upgrade head
+```
