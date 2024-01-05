@@ -21,4 +21,9 @@ class Settings(BaseSettings):
 
     # to override more_settings:
     # export my_prefix_more_settings='{"foo": "x", "apple": 1}'
-    model_config = SettingsConfigDict(env_prefix="my_prefix_")
+    #model_config = SettingsConfigDict(env_file='/home/phil/repo/plutus/.env')
+    model_config = SettingsConfigDict(env_file='.env')
+
+print("************************************")
+print(Settings().model_dump())
+print("************************************")
