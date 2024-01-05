@@ -33,4 +33,5 @@ dependencies = [
   "pydantic-settings",
   "litestar[standard]",
   "alembic",
+  "typer",
 ]
