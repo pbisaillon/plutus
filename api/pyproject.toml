@@ -9,6 +9,7 @@ addopts = [
 
 [tool.setuptools_scm]
 version_file = "src/_version.py"
+root = ".."
 
 [tool.black]
 line_lenght=88
@@ -18,7 +19,7 @@ name = "Plutus"
 dynamic = ["version"]
 description = "Simple dashboard to visualize my transactions"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.11"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
