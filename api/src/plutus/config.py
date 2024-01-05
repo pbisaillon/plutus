@@ -23,7 +23,3 @@ class Settings(BaseSettings):
     # export my_prefix_more_settings='{"foo": "x", "apple": 1}'
     #model_config = SettingsConfigDict(env_file='/home/phil/repo/plutus/.env')
     model_config = SettingsConfigDict(env_file='.env')
-
-print("************************************")
-print(Settings().model_dump())
-print("************************************")
