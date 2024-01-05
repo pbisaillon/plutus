@@ -1,5 +1,5 @@
 from plutus.db import *
-from datetime import date, datetime, timedelta, UTC
+from datetime import date
 import pytest
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker

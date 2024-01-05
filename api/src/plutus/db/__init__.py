@@ -12,22 +12,17 @@ engine = create_engine(settings.sqlite_dsn)
 Session = sessionmaker(bind=engine)
 
 
-def get_a_session() -> Session:
+def getsession():
     return Session()
+
+
+def get_a_session() -> Session:
+    session = Session()
+    try:
+        yield session
+    finally:
+        session.close()
 
 
 def initialize() -> None:
     Base.metadata.create_all(engine)
-
-
-@contextmanager
-def session_manager() -> Session:
-    with Session() as session:
-        session.begin()
-        try:
-            yield session
-        except:
-            session.rollback()
-            raise
-        else:
-            session.commit()
