@@ -32,9 +32,6 @@ def add_raw_transaction(
 
 def get_transaction(id: int, session: Session) -> Transaction:
     return session.get(Transaction, id)
-    return session.execute(
-        select(Transaction).where(Transaction.id == id)
-    ).scalar_one_or_none()
 
 
 def delete_transaction(id: int, session: Session) -> None:

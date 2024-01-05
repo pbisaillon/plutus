@@ -13,7 +13,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    sqlite_dsn: str = "sqlite:///plutus.sqlite3"
+    sqlite_dsn: str = "sqlite:////Users/phil/Documents/repo/plutus/plutus.sqlite3"
 
     # to override domains:
     # export my_prefix_domains='["foo.com", "bar.com"]'
